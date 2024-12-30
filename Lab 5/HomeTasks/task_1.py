@@ -41,7 +41,7 @@ year_encoded = le_year.fit_transform(year)
 features = list(zip(island_encoded, bill_length_mm_encoded, bill_depth_mm_encoded,
                     flipper_length_mm_encoded, body_mass_g_encoded, sex_encoded))
 features_train, features_test, label_train, label_test = train_test_split(features, species_encoded,
-                                                                          test_size=0.4, random_state=43)
+                                                                          test_size=0.3, random_state=43)
 model = DecisionTreeClassifier()
 model.fit(features_train, label_train)
 
